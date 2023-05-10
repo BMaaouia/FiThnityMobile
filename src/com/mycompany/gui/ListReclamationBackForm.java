@@ -310,7 +310,7 @@ public class ListReclamationBackForm extends BaseForm{
         FontImage suprrimerImage = FontImage.createMaterial(FontImage.MATERIAL_DELETE, supprmierStyle);
         lSupprimer.setIcon(suprrimerImage);
         lSupprimer.setTextPosition(RIGHT);
-        
+         // use two network threads instead of one
         //click delete icon
         lSupprimer.addPointerPressedListener(l -> {
             

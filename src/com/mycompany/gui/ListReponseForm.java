@@ -347,7 +347,7 @@ public class ListReponseForm extends BaseForm{
          BoxLayout.encloseX(emailText),
            BoxLayout.encloseX(messagetxt),
                    
-
+ // use two network threads instead of one
     //      BoxLayout.encloseX(idrectxt),
      //       BoxLayout.encloseX(Typetxt),
                     //   BoxLayout.encloseX(Typetxt,lModifier);
