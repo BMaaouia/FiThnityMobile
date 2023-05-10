@@ -105,6 +105,8 @@ public class BaseForm extends Form {
         tb.addMaterialCommandToSideMenu("Blog", FontImage.MATERIAL_SETTINGS, e -> new ListBlogForm(res).show());
         tb.addMaterialCommandToSideMenu("Demande", FontImage.MATERIAL_SETTINGS, e -> new ListDemandeForm(res).show());
         tb.addMaterialCommandToSideMenu("Vehicule", FontImage.MATERIAL_SETTINGS, e -> new ListVehiculeForm(res).show());
+        tb.addMaterialCommandToSideMenu("Produit", FontImage.MATERIAL_SETTINGS, e -> new ListProduitForm(res).show());
+        tb.addMaterialCommandToSideMenu("Reservation", FontImage.MATERIAL_SETTINGS, e -> new ListReservationForm(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());
     }
 }
