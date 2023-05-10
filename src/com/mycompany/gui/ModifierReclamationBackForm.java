@@ -99,6 +99,8 @@ ComboBox<String> typer = new ComboBox<>("Problèmes achat en ligne", "Problèmes
             }
         });
  // use two network threads instead of one
+         //Appel affichage methode
+
         Button btnAnnuler = new Button("Annuler");
         btnAnnuler.addActionListener(e -> {
             new ListReclamationBackForm(res).show();

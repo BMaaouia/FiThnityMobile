@@ -30,6 +30,7 @@ public class ModifierReclamationForm extends BaseForm {
  // use two network threads instead of one
     public ModifierReclamationForm(Resources res, Reclamation r) {
         super("Modifier Reclamation", BoxLayout.y());
+        //Appel affichage methode
 
         Toolbar tb = new Toolbar(true);
         current = this;
