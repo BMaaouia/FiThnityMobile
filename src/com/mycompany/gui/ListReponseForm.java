@@ -74,7 +74,7 @@ public class ListReponseForm extends BackForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
         
          swipe.setUIID("Container");
@@ -116,7 +116,7 @@ public class ListReponseForm extends BackForm{
         add(LayeredLayout.encloseIn(swipe, radioContainer));
 
         ButtonGroup barGroup = new ButtonGroup();
-        RadioButton mesListes = RadioButton.createToggle("Liste Blogs", barGroup);
+        RadioButton mesListes = RadioButton.createToggle("Liste Reclamations", barGroup);
         mesListes.setUIID("SelectBar");
         RadioButton liste = RadioButton.createToggle("Répondre ", barGroup);
         liste.setUIID("SelectBar");
@@ -147,6 +147,20 @@ public class ListReponseForm extends BackForm{
 
             refreshTheme();
         });
+        
+       
+        
+        
+         partage.addActionListener((e) -> {
+               InfiniteProgress ip = new InfiniteProgress();
+        final Dialog ipDlg = ip.showInifiniteBlocking();
+        
+          ListReponseForm a = new ListReponseForm(res);
+            a.show();
+                               mesListes.setSelected(true);
+
+            refreshTheme();
+        });
 
         add(LayeredLayout.encloseIn(
                 GridLayout.encloseIn(3, mesListes, liste, partage),
@@ -172,7 +186,7 @@ public class ListReponseForm extends BackForm{
         ArrayList<Reponse>list = ServiceReponse.getInstance().affichageReponse();
         
         for(Reponse rep : list ) {
-            String urlImage ="back-logo.jpeg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
+            String urlImage ="back-logoo.jpg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
             
              Image placeHolder = Image.createImage(120, 90);
             EncodedImage enc =  EncodedImage.createFromImage(placeHolder,false);
@@ -230,7 +244,7 @@ public class ListReponseForm extends BackForm{
                     )
                 );
         
-        swipe.addTab("",res.getImage("back-logo.jpeg"), page1);
+        swipe.addTab("",res.getImage("back-logoo.jpg"), page1);
         
         
         

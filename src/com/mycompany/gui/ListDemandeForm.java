@@ -70,7 +70,7 @@ public class ListDemandeForm extends BaseForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
         
          swipe.setUIID("Container");
@@ -179,7 +179,7 @@ public class ListDemandeForm extends BaseForm{
         ArrayList<Demande>list = ServiceDemande.getInstance().affichageDemande();
         
         for(Demande rep : list ) {
-            String urlImage ="back-logo.jpeg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
+            String urlImage ="back-logoo.jpg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
             
              Image placeHolder = Image.createImage(120, 90);
             EncodedImage enc =  EncodedImage.createFromImage(placeHolder,false);

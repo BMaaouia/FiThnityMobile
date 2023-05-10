@@ -65,7 +65,7 @@ public class AjoutCommentForm extends BaseForm {
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("template.png"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
         //
         
@@ -108,26 +108,16 @@ public class AjoutCommentForm extends BaseForm {
         add(LayeredLayout.encloseIn(swipe, radioContainer));
 
         ButtonGroup barGroup = new ButtonGroup();
-        RadioButton mesListes = RadioButton.createToggle("Mes Reclamations", barGroup);
-        mesListes.setUIID("SelectBar");
-        RadioButton liste = RadioButton.createToggle("Autres", barGroup);
-        liste.setUIID("SelectBar");
-        RadioButton partage = RadioButton.createToggle("Reclamer", barGroup);
+        
+        RadioButton partage = RadioButton.createToggle("Commenter", barGroup);
         partage.setUIID("SelectBar");
         Label arrow = new Label(res.getImage("news-tab-down-arrow.png"), "Container");
 
 
-        mesListes.addActionListener((e) -> {
-               InfiniteProgress ip = new InfiniteProgress();
-        final Dialog ipDlg = ip.showInifiniteBlocking();
-        
-        //  ListReclamationForm a = new ListReclamationForm(res);
-          //  a.show();
-            refreshTheme();
-        });
+       
 
         add(LayeredLayout.encloseIn(
-                GridLayout.encloseIn(3, mesListes, liste, partage),
+                GridLayout.encloseIn(1, partage),
                 FlowLayout.encloseBottom(arrow)
         ));
 
@@ -137,8 +127,7 @@ public class AjoutCommentForm extends BaseForm {
             arrow.setVisible(true);
             updateArrowPosition(partage, arrow);
         });
-        bindButtonSelection(mesListes, arrow);
-        bindButtonSelection(liste, arrow);
+  
         bindButtonSelection(partage, arrow);
         // special case for rotation
         addOrientationListener(e -> {
@@ -267,7 +256,7 @@ public class AjoutCommentForm extends BaseForm {
                     )
                 );
         
-        swipe.addTab("",res.getImage("template.png"), page1);
+        swipe.addTab("",res.getImage("back-logoo.jpg"), page1);
         
         
         

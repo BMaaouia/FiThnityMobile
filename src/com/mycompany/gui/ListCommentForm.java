@@ -67,7 +67,7 @@ public class ListCommentForm extends BaseForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
 //        // Welcome current user
 //        
@@ -123,25 +123,17 @@ public class ListCommentForm extends BaseForm{
         add(LayeredLayout.encloseIn(swipe, radioContainer));
 
         ButtonGroup barGroup = new ButtonGroup();
-        RadioButton mesListes = RadioButton.createToggle("Comments", barGroup);
-        mesListes.setUIID("SelectBar");
         
-        RadioButton partage = RadioButton.createToggle("Commenter", barGroup);
+        
+        RadioButton partage = RadioButton.createToggle("Comments", barGroup);
         partage.setUIID("SelectBar");
         Label arrow = new Label(res.getImage("news-tab-down-arrow.png"), "Container");
 
 
-        mesListes.addActionListener((e) -> {
-               InfiniteProgress ip = new InfiniteProgress();
-        final Dialog ipDlg = ip.showInifiniteBlocking();
-        
-        ListCommentForm a = new ListCommentForm(res,b);
-          a.show();
-            refreshTheme();
-        });
+       
 
         add(LayeredLayout.encloseIn(
-                GridLayout.encloseIn(3, mesListes, partage),
+                GridLayout.encloseIn(1, partage),
                 FlowLayout.encloseBottom(arrow)
         ));
 
@@ -151,7 +143,7 @@ public class ListCommentForm extends BaseForm{
             arrow.setVisible(true);
             updateArrowPosition(partage, arrow);
         });
-        bindButtonSelection(mesListes, arrow);
+        
         bindButtonSelection(partage, arrow);
         // special case for rotation
         addOrientationListener(e -> {

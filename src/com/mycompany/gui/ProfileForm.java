@@ -64,7 +64,7 @@ public class ProfileForm extends BaseForm {
         tb.addSearchCommand(e -> {});
         
         
-       Image back = res.getImage("profile-background.jpg");
+       Image back = res.getImage("back-logoo.jpg");
         //Image img = res.getImage(SessionManager.getUserImg());
         
         String imageName = "file:///C:/xampp/htdocs/GestionUser/GestionUser/public/uploads/user_images/" + SessionManager.getUserImg();

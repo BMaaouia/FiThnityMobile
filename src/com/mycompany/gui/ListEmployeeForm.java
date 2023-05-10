@@ -65,7 +65,7 @@ public class ListEmployeeForm extends BackForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
 //        // Welcome current user
 //        
@@ -178,7 +178,7 @@ public class ListEmployeeForm extends BackForm{
         ArrayList<Employee>list = ServiceEmployee.getInstance().affichageEmployees();
         
         for(Employee e : list ) {
-            String urlImage ="back-logo.jpeg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
+            String urlImage ="back-logoo.jpg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
             
              Image placeHolder = Image.createImage(120, 90);
             EncodedImage enc =  EncodedImage.createFromImage(placeHolder,false);
@@ -236,7 +236,7 @@ public class ListEmployeeForm extends BackForm{
                     )
                 );
         
-        swipe.addTab("",res.getImage("back-logo.jpeg"), page1);
+        swipe.addTab("",res.getImage("back-logoo.jpg"), page1);
         
         
         

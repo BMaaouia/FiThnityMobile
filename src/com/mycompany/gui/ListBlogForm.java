@@ -64,7 +64,7 @@ public class ListBlogForm extends BaseForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
 //        // Welcome current user
 //        
@@ -138,7 +138,7 @@ public class ListBlogForm extends BaseForm{
         });
 
         add(LayeredLayout.encloseIn(
-                GridLayout.encloseIn(3, mesListes, partage),
+                GridLayout.encloseIn(2, mesListes, partage),
                 FlowLayout.encloseBottom(arrow)
         ));
 
@@ -218,7 +218,7 @@ public class ListBlogForm extends BaseForm{
                     )
                 );
         
-        swipe.addTab("",res.getImage("template.png"), page1);
+        swipe.addTab("",res.getImage("back-logoo.jpg"), page1);
         
         
         

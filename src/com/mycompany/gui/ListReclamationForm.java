@@ -66,7 +66,7 @@ public class ListReclamationForm extends BaseForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
 
         
@@ -188,7 +188,7 @@ search.addDataChangedListener((i, ii) -> {
     container.removeAll();
 
     for (Reclamation rec : reclamations) {
-        String urlImage = "back-logo.jpeg"; // Image path (static for now)
+        String urlImage = "back-logoo.jpg"; // Image path (static for now)
 
         Image placeHolder = Image.createImage(120, 90);
         EncodedImage enc = EncodedImage.createFromImage(placeHolder, false);
@@ -208,7 +208,7 @@ private void updateReclamationsUI(Container container, ArrayList<Reclamation> fi
     container.removeAll();
 
     for (Reclamation rec : filteredList) {
-        String urlImage = "back-logo.jpeg"; // Image path (static for now)
+        String urlImage = "back-logoo.jpg"; // Image path (static for now)
 
         Image placeHolder = Image.createImage(120, 90);
         EncodedImage enc = EncodedImage.createFromImage(placeHolder, false);
@@ -343,7 +343,7 @@ Container reclamationComponent = BorderLayout.west(image);
                     )
                 );
         
-        swipe.addTab("",res.getImage("back-logo.jpeg"), page1);
+        swipe.addTab("",res.getImage("back-logoo.jpg"), page1);
         
         
         

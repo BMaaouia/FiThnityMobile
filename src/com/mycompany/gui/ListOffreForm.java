@@ -66,7 +66,7 @@ public class ListOffreForm extends BackForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
 //        // Welcome current user
 //        
@@ -179,7 +179,7 @@ public class ListOffreForm extends BackForm{
         ArrayList<Offre>list = ServiceOffre.getInstance().affichageOffres();
         
         for(Offre o : list ) {
-            String urlImage ="back-logo.jpeg";
+            String urlImage ="back-logoo.jpg";
             
              Image placeHolder = Image.createImage(120, 90);
             EncodedImage enc =  EncodedImage.createFromImage(placeHolder,false);

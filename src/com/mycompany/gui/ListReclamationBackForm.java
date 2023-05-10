@@ -191,7 +191,7 @@ public class ListReclamationBackForm extends BaseForm{
         ArrayList<Reclamation>list = ServiceReclamation.getInstance().affichageReclamations();
         
         for(Reclamation rec : list ) {
-            String urlImage ="back-logo.jpeg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
+            String urlImage ="back-logoo.jpg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
             
              Image placeHolder = Image.createImage(120, 90);
             EncodedImage enc =  EncodedImage.createFromImage(placeHolder,false);
@@ -249,7 +249,7 @@ public class ListReclamationBackForm extends BaseForm{
                     )
                 );
         
-        swipe.addTab("",res.getImage("back-logo.jpeg"), page1);
+        swipe.addTab("",res.getImage("back-logoo.jpg"), page1);
         
         
         
