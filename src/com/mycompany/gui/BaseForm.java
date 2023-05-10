@@ -101,7 +101,10 @@ public class BaseForm extends Form {
         ));
         
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
-        tb.addMaterialCommandToSideMenu("Reclamation", FontImage.MATERIAL_SETTINGS, e -> new ListUsersForm(res).show());
+        tb.addMaterialCommandToSideMenu("Reclamation", FontImage.MATERIAL_SETTINGS, e -> new ListReclamationForm(res).show());
+        tb.addMaterialCommandToSideMenu("Blog", FontImage.MATERIAL_SETTINGS, e -> new ListBlogForm(res).show());
+        tb.addMaterialCommandToSideMenu("Demande", FontImage.MATERIAL_SETTINGS, e -> new ListDemandeForm(res).show());
+        tb.addMaterialCommandToSideMenu("Vehicule", FontImage.MATERIAL_SETTINGS, e -> new ListVehiculeForm(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());
     }
 }

@@ -16,6 +16,7 @@ import com.codename1.ui.EncodedImage;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
+import com.codename1.ui.Toolbar;
 import com.codename1.ui.URLImage;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
@@ -35,16 +36,26 @@ import java.util.Map;
  *
  * @author Maaouia
  */
-public class ListUsersForm extends BaseForm {
+public class ListUsersForm extends BackForm {
     private MultiList userList;
     private ArrayList<Map<String, Object>> userItems;
 
     public ListUsersForm(Resources res) {
+        super("Newsfeed", BoxLayout.y());
+        Toolbar tb = new Toolbar(true);
+        setToolbar(tb);
+        getTitleArea().setUIID("Container");
+        setTitle("AdminSS");
+        getContentPane().setScrollVisible(false);
+        
+        super.addSideMenu(res);
+        
+        tb.addSearchCommand(e -> {});
         //Appel affichage methode
         ArrayList<User>list = ServiceUser.getInstance().affichageUsers();
         
         for(User u : list ) {
-             String urlImage ="back-logo.jpeg";//image statique pour le moment ba3d taw fi  videos jayin nwarikom image 
+             String urlImage ="back-logo.jpeg";
             
              Image placeHolder = Image.createImage(120, 90);
              EncodedImage enc =  EncodedImage.createFromImage(placeHolder,false);

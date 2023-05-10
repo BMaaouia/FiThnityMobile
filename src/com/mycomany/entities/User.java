@@ -55,6 +55,14 @@ public class User {
         this.userImg = userImg;
     }
 
+    public User(int userId, String userFirstName, String userLastName, String userEmail) {
+        this.userId = userId;
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.userEmail = userEmail;
+    }
+
+    
     public int getUserId() {
         return userId;
     }

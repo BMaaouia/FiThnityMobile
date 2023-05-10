@@ -150,7 +150,7 @@ public class ServiceUser {
                    // new ListReclamationForm(rs).show();//yemchi lel list reclamation
                    // new AjoutReclamationForm(rs).show();
                     if(user.get("admin").toString().equals("1.0")){
-                        new ListUsersForm(theme).show();
+                        new ListUsersForm(rs).show();
                     }
                     else{
                         //System.out.println(user.get("admin").toString()) ;
@@ -226,15 +226,14 @@ public class ServiceUser {
         return  resultOk;
     }
     
-    public static void EditUser(int id, String UserFirstName,String UserLastName, String Password, String Email) {
-        String url = Statics.BASE_URL+"/edit/user?id="+id+"&firstname="+UserFirstName+"&lastname="+UserLastName+"&email="+Email+"&password="+Password;
+    public static void EditUser(int id, String UserFirstName,String UserLastName, String Email) {
+        String url = Statics.BASE_URL+"/edit/user?id="+id+"&firstname="+UserFirstName+"&lastname="+UserLastName+"&email="+Email;
         MultipartRequest req = new MultipartRequest();
         req.setUrl(url);
         req.setPost(true);
         req.addArgument("id",String.valueOf(SessionManager.getId()));
         req.addArgument("firstname",UserFirstName);
         req.addArgument("lastname",UserLastName);
-        req.addArgument("password",Password);
         req.addArgument("email",Email);
         System.out.println(Email);
         req.addResponseListener((response)-> {

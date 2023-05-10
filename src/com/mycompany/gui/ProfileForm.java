@@ -129,10 +129,7 @@ public class ProfileForm extends BaseForm {
         email.setUIID("TextFieldBlack");
         addStringValue("E-Mail", email);
         
-        String p = SessionManager.getPassowrd();
-        TextField password = new TextField("", "Password", 20, TextField.PASSWORD);
-        password.setUIID("TextFieldBlack");
-        addStringValue("Password", password);
+        
         
         Supprimer.setUIID("Update");
         Modifier.setUIID("Edit");
@@ -142,10 +139,9 @@ public class ProfileForm extends BaseForm {
         Modifier.addActionListener((ActionEvent edit)->{
             InfiniteProgress ip = new InfiniteProgress();
             //final Dialog ipDlg = ip.showInifinieteBlooking();
-            ServiceUser.EditUser(SessionManager.getId(),firstname.getText(), lastname.getText(), password.getText(), email.getText());
+            ServiceUser.EditUser(SessionManager.getId(),firstname.getText(), lastname.getText(),  email.getText());
             SessionManager.setUserFirstName(firstname.getText());
             SessionManager.setUserLastName(lastname.getText());
-            SessionManager.setPassowrd(password.getText());
             SessionManager.setEmail(email.getText());
             Dialog.show("Succes","Modifications des coordonnees avec succes","OK",null);
            // ipDlg.dispose();
