@@ -34,7 +34,6 @@ import com.codename1.ui.plaf.Style;
 import com.codename1.ui.util.Resources;
 import com.mycomany.entities.Blog;
 import com.mycomany.entities.Comment;
-import com.mycomany.entities.Reclamation;
 import com.mycompany.services.ServiceComment;
 
 

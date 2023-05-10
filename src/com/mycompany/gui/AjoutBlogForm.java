@@ -30,7 +30,6 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.util.Resources;
 import com.mycomany.entities.Blog;
-import com.mycomany.entities.Reclamation;
 import com.mycompany.services.ServiceBlog;
 
 
@@ -38,13 +37,13 @@ import com.mycompany.services.ServiceBlog;
  *
  * @author Lenovo
  */
-public class AjoutReclamationForm extends BaseForm {
+public class AjoutBlogForm extends BaseForm {
     
     
     Form current;
         private Resources theme;
 
-    public AjoutReclamationForm(Resources res ) {
+    public AjoutBlogForm(Resources res ) {
         super("Newsfeed",BoxLayout.y()); //herigate men Newsfeed w l formulaire vertical
     
         Toolbar tb = new Toolbar(true);
