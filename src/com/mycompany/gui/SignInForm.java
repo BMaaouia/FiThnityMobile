@@ -30,7 +30,7 @@ import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
-import com.mycompany.services.ServiceUser;
+//import com.mycompany.services.ServiceUtilisateur;
 
 /**
  * Sign in UI
@@ -52,9 +52,9 @@ public class SignInForm extends BaseForm {
         
         add(BorderLayout.NORTH, new Label(res.getImage("Logo.png"), "LogoLabel"));
         
-        TextField email = new TextField("", "Email", 20, TextField.ANY);
+        TextField username = new TextField("", "Username", 20, TextField.ANY);
         TextField password = new TextField("", "Password", 20, TextField.PASSWORD);
-        email.setSingleLineTextArea(false);
+        username.setSingleLineTextArea(false);
         password.setSingleLineTextArea(false);
         Button signIn = new Button("Sign In");
         Button signUp = new Button("Sign Up");
@@ -65,7 +65,7 @@ public class SignInForm extends BaseForm {
         
         signUp.addActionListener(e -> new SignUpForm(res).show());
         signUp.setUIID("Link");
-        Label dontHaveAnAccount = new Label("Vous n'avez aucune compte?");
+        Label doneHaveAnAccount = new Label("Vous n'avez aucune compte?");
         
         
         
@@ -73,12 +73,12 @@ public class SignInForm extends BaseForm {
         
         
         Container content = BoxLayout.encloseY(
-                new FloatingHint(email),
+                new FloatingHint(username),
                 createLineSeparator(),
                 new FloatingHint(password),
                 createLineSeparator(),
                 signIn,
-                FlowLayout.encloseCenter(dontHaveAnAccount, signUp),mp
+                FlowLayout.encloseCenter(doneHaveAnAccount, signUp),mp
         );
         content.setScrollableY(true);
         add(BorderLayout.SOUTH, content);
@@ -86,7 +86,7 @@ public class SignInForm extends BaseForm {
         
         signIn.addActionListener(e -> 
         {
-               ServiceUser.getInstance().signin(email, password, res);
+         //      ServiceUtilisateur.getInstance().signin(username, password, res);
 
            
         });
@@ -95,12 +95,12 @@ public class SignInForm extends BaseForm {
         
         //Mp oublie event
         
-        mp.addActionListener((e) -> {
-           
-            new ActivateForm(res).show();
-            
-            
-        });
+//        mp.addActionListener((e) -> {
+//           
+//            new ActivateForm(res).show();
+//            
+//            
+//        });
         
     }
     
