@@ -53,7 +53,7 @@ public class AjoutReclamationForm extends BaseForm {
         getTitleArea().setUIID("Container");
         setTitle("Ajout Reclamation");
         getContentPane().setScrollVisible(false);
-        
+         // use two network threads instead of one
         
         tb.addSearchCommand(e ->  {
             

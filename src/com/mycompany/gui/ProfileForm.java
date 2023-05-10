@@ -54,7 +54,7 @@ public class ProfileForm extends BaseForm {
         
         tb.addSearchCommand(e -> {});
         
-        
+         // use two network threads instead of one
         Image img = res.getImage("profile-background.jpg");
         if(img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
             img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);

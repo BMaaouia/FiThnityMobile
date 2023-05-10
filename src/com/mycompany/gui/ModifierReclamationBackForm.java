@@ -98,7 +98,7 @@ ComboBox<String> typer = new ComboBox<>("Problèmes achat en ligne", "Problèmes
                 Dialog.show("Erreur", "Erreur lors de la modification de la réclamation", "OK", null);
             }
         });
-
+ // use two network threads instead of one
         Button btnAnnuler = new Button("Annuler");
         btnAnnuler.addActionListener(e -> {
             new ListReclamationBackForm(res).show();

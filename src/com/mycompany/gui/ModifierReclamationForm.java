@@ -27,7 +27,7 @@ import java.util.Date;
 public class ModifierReclamationForm extends BaseForm {
 
     private Form current;
-
+ // use two network threads instead of one
     public ModifierReclamationForm(Resources res, Reclamation r) {
         super("Modifier Reclamation", BoxLayout.y());
 

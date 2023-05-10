@@ -51,7 +51,7 @@ public class BaseForm extends Form {
         super(title, contentPaneLayout);
     }
     
-    
+     // use two network threads instead of one
     public Component createLineSeparator() {
         Label separator = new Label("", "WhiteSeparator");
         separator.setShowEvenIfBlank(true);

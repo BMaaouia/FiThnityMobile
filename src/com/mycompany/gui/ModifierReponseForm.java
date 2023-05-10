@@ -86,7 +86,7 @@ message.getUnselectedStyle().setFgColor(0xf21f1f); // set text color to yellow
                 Dialog.show("Erreur", "Erreur lors de la modification de la reponse", "OK", null);
             }
         });
-
+ // use two network threads instead of one
         Button btnAnnuler = new Button("Annuler");
         btnAnnuler.addActionListener(e -> {
             new ListReponseForm(res).show();
