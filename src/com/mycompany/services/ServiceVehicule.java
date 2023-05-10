@@ -54,7 +54,7 @@ public class ServiceVehicule {
     public ArrayList<Vehicule>affichageVehicule() {
         ArrayList<Vehicule> result = new ArrayList<>();
         
-        String url = Statics.BASE_URL + "/vehiculemobile";
+        String url = Statics.BASE_URL + "/vehmobilee";
         req.setUrl(url);
         
         req.addResponseListener(new ActionListener<NetworkEvent>() {
