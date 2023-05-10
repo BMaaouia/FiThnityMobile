@@ -32,7 +32,6 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.layouts.Layout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.util.Resources;
-import java.io.IOException;
 
 /**
  * Base class for the forms with common functionality
@@ -69,39 +68,22 @@ public class BaseForm extends Form {
 
     protected void addSideMenu(Resources res) {
         Toolbar tb = getToolbar();
-        String imageName = "file:///C:/xampp/htdocs/GestionUser/GestionUser/public/uploads/user_images/" + SessionManager.getUserImg();
-        Image img_user = null;
-        if (imageName != null) {
-            try {
-                img_user = Image.createImage(imageName);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
         Image img = res.getImage("profile-background.jpg");
         if(img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
             img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);
         }
-       
-        
         ScaleImageLabel sl = new ScaleImageLabel(img);
-        
-        Label profilePic = new Label(img_user);
-        profilePic.setUIID("PictureWhiteBackgrond");
-        int picSize = Display.getInstance().getDisplayHeight() / 8; // adjust the size as needed
-        profilePic.setPreferredW(picSize);
-        profilePic.setPreferredH(picSize);
-        
         sl.setUIID("BottomPad");
         sl.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
         
         tb.addComponentToSideMenu(LayeredLayout.encloseIn(
                 sl,
-                FlowLayout.encloseCenterBottom( profilePic )
+                FlowLayout.encloseCenterBottom(
+                        new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond"))
         ));
         
-        tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
-        tb.addMaterialCommandToSideMenu("Reclamation", FontImage.MATERIAL_SETTINGS, e -> new ListUsersForm(res).show());
+        tb.addMaterialCommandToSideMenu("Newsfeed", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
+      tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());
     }
 }
