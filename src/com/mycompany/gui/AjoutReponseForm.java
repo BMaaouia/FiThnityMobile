@@ -47,7 +47,7 @@ import java.util.Date;
 public class AjoutReponseForm extends BaseForm {
      Form current;
      Reclamation rec= new Reclamation();
-       private Reclamation reclamation;
+      private Reclamation reclamationn;
     public AjoutReponseForm(Resources res, Reclamation reclamation ) {
         super("Newsfeed",BoxLayout.y()); //herigate men Newsfeed w l formulaire vertical
     
@@ -57,7 +57,7 @@ public class AjoutReponseForm extends BaseForm {
         getTitleArea().setUIID("Container");
         setTitle("Ajout Reponse");
         getContentPane().setScrollVisible(false);
-         this.reclamation = reclamation;
+         this.reclamationn = reclamation;
         
         tb.addSearchCommand(e ->  {
             
@@ -68,7 +68,7 @@ public class AjoutReponseForm extends BaseForm {
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
         //
         
@@ -138,7 +138,7 @@ public class AjoutReponseForm extends BaseForm {
         
          ListReponseForm a = new ListReponseForm(res);
            a.show();
-                   mesListes.setSelected(true);
+                   partage.setSelected(true);
 
             refreshTheme();
         });
@@ -234,9 +234,9 @@ refreshTheme(); //Actualisation
         
     }
 
-    AjoutReponseForm(Resources res, Reponse rep) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    AjoutReponseForm(Resources res, Reponse rep) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
 
 
@@ -283,7 +283,7 @@ refreshTheme(); //Actualisation
                     )
                 );
         
-        swipe.addTab("",res.getImage("back-logo.jpeg"), page1);
+        swipe.addTab("",res.getImage("back-logoo.jpg"), page1);
         
         
         

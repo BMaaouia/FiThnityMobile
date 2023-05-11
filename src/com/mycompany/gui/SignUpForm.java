@@ -60,6 +60,7 @@ import java.util.Vector;
 
 
 
+
 /**
  * Signup UI
  *
@@ -238,6 +239,15 @@ public class SignUpForm extends BaseForm {
             Dialog.show("Erreur","Veuillez remplir votre email!","OK",null);
             return false;
         }
+        
+          if (!email_text.getText().contains("@") || !email_text.getText().contains(".")) {
+       
+               
+                Dialog.show("Erreur","Veuillez entrer un email valide","OK",null);
+            return false;
+
+        }
+   
         
         
 

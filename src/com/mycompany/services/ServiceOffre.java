@@ -51,7 +51,7 @@ public class ServiceOffre {
     
   public void ajoutOffre(Offre offre) {
  
-String url = Statics.BASE_URL + "/offre/new?metier=" + offre.getMetier() + "&secteur=" + offre.getSecteur() + "&ville=" + offre.getVille() + "&nombredeposte=" + offre.getNombredeposte() + "&salaire=" + offre.getsalaire();
+String url = Statics.BASE_URL + "/offre/mob/mobilenew?metier=" + offre.getMetier() + "&secteur=" + offre.getSecteur() + "&ville=" + offre.getVille() + "&nombredeposte=" + offre.getNombredeposte() + "&salaire=" + offre.getsalaire();
     
     req.setUrl(url);
     req.addResponseListener((e) -> {
@@ -70,7 +70,7 @@ String url = Statics.BASE_URL + "/offre/new?metier=" + offre.getMetier() + "&sec
     public ArrayList<Offre>affichageOffres() {
         ArrayList<Offre> result = new ArrayList<>();
         
-    String url = Statics.BASE_URL + "/offre/offres";
+    String url = Statics.BASE_URL + "/offre/mob/moboffres";
         req.setUrl(url);
         
         req.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -172,7 +172,7 @@ SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
     
     //Delete 
     public boolean deleteOffre(int id ) {
-    String url = Statics.BASE_URL + "/offre/delete?id=" + id;
+    String url = Statics.BASE_URL + "/offre/mob/deletemob/" + (int)id;
         
         req.setUrl(url);
         
@@ -192,7 +192,7 @@ SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
     
     //Update 
     public boolean modifierOffre(Offre offre) {
-String url = Statics.BASE_URL +"/offre/modifier?id="+offre.getId()+"&metier="+offre.getMetier()+"&secteur="+offre.getSecteur()+"&ville="+offre.getVille()+"&nombredeposte="+offre.getNombredeposte()+"&salaire="+offre.getsalaire();
+String url = Statics.BASE_URL +"/offre/mob/modifiermob?id="+offre.getId()+"&metier="+offre.getMetier()+"&secteur="+offre.getSecteur()+"&ville="+offre.getVille()+"&nombredeposte="+offre.getNombredeposte()+"&salaire="+offre.getsalaire();
         req.setUrl(url);
         
         req.addResponseListener(new ActionListener<NetworkEvent>() {

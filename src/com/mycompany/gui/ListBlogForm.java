@@ -356,7 +356,7 @@ public class ListBlogForm extends BaseForm{
 //           BoxLayout.encloseX(nomtTxt),
           
                     //   BoxLayout.encloseX(Typetxt,lModifier);
-                                             BoxLayout.encloseX(Acomment,lSupprimer,lcomment)));
+                                             BoxLayout.encloseX(Acomment,lcomment)));
 
      add(cnt);
            

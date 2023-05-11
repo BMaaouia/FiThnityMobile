@@ -126,9 +126,9 @@ ComboBox<String> typer = new ComboBox<>("Problèmes achat en ligne", "Problèmes
             BorderLayout.center(numtel).
                     add(BorderLayout.WEST, l4),
             BorderLayout.center(typer).
-                    add(BorderLayout.WEST, l5),
+                    add(BorderLayout.WEST, l6),
             BorderLayout.center(message).
-                    add(BorderLayout.WEST, l6)
+                    add(BorderLayout.WEST, l5)
     );
 
     content.setScrollableY(true);

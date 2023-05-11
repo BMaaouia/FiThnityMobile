@@ -153,7 +153,7 @@ public class AjoutCommentForm extends BaseForm {
         text.setUIID("TextFieldBlack");
         addStringValue("text",text);
         
-        TextField nom_prenom = new TextField("", "entrer nom_prenom!!");
+        TextField nom_prenom = new TextField(SessionManager.getUserFirstName()+" "+SessionManager.getUserLastName());
         nom_prenom.setUIID("TextFieldBlack");
         addStringValue("nom_prenom",nom_prenom);
         
@@ -164,7 +164,11 @@ public class AjoutCommentForm extends BaseForm {
         //onclick button event 
 
         btnAjouter.addActionListener((e) -> {
-            
+              String errorMessage = validateFields( nom_prenom,  text);
+            if (!errorMessage.isEmpty()) {
+                Dialog.show("Erreur", errorMessage, "OK", null);
+                return;
+            }
             
             try {
                 
@@ -282,5 +286,23 @@ public class AjoutCommentForm extends BaseForm {
     
    
    
+    
+    
+    
+   public String validateFields( TextField nom_prenom,  TextField text) {
+    StringBuilder errorMessage = new StringBuilder();
+
+   
+     if (text.getText().isEmpty()) {
+        errorMessage.append("Le champ text est obligatoire.\n");
+    }
+   
+    
+    if (nom_prenom.getText().isEmpty()) {
+        errorMessage.append("Le champ nom est obligatoire.\n");
+    }
+   
+    return errorMessage.toString();
+}
     
 }

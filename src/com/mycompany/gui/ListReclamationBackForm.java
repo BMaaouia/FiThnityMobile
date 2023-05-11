@@ -67,7 +67,7 @@ public class ListReclamationBackForm extends BaseForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
         
 //        // Welcome current user
 //        
@@ -136,7 +136,7 @@ public class ListReclamationBackForm extends BaseForm{
                InfiniteProgress ip = new InfiniteProgress();
         final Dialog ipDlg = ip.showInifiniteBlocking();
         
-          AjoutReclamationForm a = new AjoutReclamationForm(res);
+          AjoutReponseForm a = new AjoutReponseForm(res,reclamation);
             a.show();
             refreshTheme();
         });
@@ -148,7 +148,7 @@ public class ListReclamationBackForm extends BaseForm{
                InfiniteProgress ip = new InfiniteProgress();
         final Dialog ipDlg = ip.showInifiniteBlocking();
         
-          ListReclamationForm a = new ListReclamationForm(res);
+          ListReclamationBackForm a = new ListReclamationBackForm(res);
             a.show();
                                mesListes.setSelected(true);
 

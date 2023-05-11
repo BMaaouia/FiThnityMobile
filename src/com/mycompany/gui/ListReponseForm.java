@@ -349,7 +349,7 @@ public class ListReponseForm extends BackForm{
         
         lrepondre.addPointerPressedListener(l -> {
             System.out.println("hello Repondre");
-            new AjoutReponseForm(res,rep).show();
+            new AjoutReponseForm(res,reclamation).show();
             System.out.println(" Reponse effectue");
         });
         

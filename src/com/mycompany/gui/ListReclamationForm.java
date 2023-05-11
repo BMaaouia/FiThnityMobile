@@ -66,7 +66,7 @@ public class ListReclamationForm extends BaseForm{
         Label s1 = new Label();
         Label s2 = new Label();
         
-        addTab(swipe,s1, res.getImage("back-logoo.jpg"),"","",res);
+        addTab(swipe,s1, res.getImage("back-logo.jpeg"),"","",res);
         
 
         
@@ -188,14 +188,16 @@ search.addDataChangedListener((i, ii) -> {
     container.removeAll();
 
     for (Reclamation rec : reclamations) {
+         if(rec.getEmail().equals(SessionManager.getEmail())){
         String urlImage = "back-logoo.jpg"; // Image path (static for now)
 
         Image placeHolder = Image.createImage(120, 90);
         EncodedImage enc = EncodedImage.createFromImage(placeHolder, false);
         URLImage urlim = URLImage.createToStorage(enc, urlImage, urlImage, URLImage.RESIZE_SCALE);
-
+        
         Component reclamationComponent = createReclamationComponent(urlim, rec, res);
         container.add(reclamationComponent);
+         }
     }
 
     // Revalidate the layout to reflect the changes
@@ -242,7 +244,7 @@ Container reclamationComponent = BorderLayout.west(image);
         Label messagetxt = new Label("Message : "+rec.getMessage(),"NewsTopLine2");
         Label datetxt = new Label("Date : "+rec.getDate(),"NewsTopLine2" );
                 Label Typetxt = new Label("type : "+rec.getTyper(),"NewsTopLine2" );
-                                
+                           
         createLineSeparator();
         
         
@@ -288,7 +290,7 @@ Container reclamationComponent = BorderLayout.west(image);
             new ModifierReclamationForm(res,rec).show();
         });
         
-        
+       
         reclamationComponent.add(BorderLayout.CENTER,BoxLayout.encloseY(
                 
                 BoxLayout.encloseX(nomtTxt),
@@ -301,7 +303,7 @@ Container reclamationComponent = BorderLayout.west(image);
      
                     //   BoxLayout.encloseX(Typetxt,lModifier);
                      BoxLayout.encloseX(lModifier,lSupprimer)));
-
+              
      return reclamationComponent;
 
 }

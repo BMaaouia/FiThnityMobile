@@ -147,15 +147,15 @@ public class AjoutReclamationForm extends BaseForm {
         //
         
       
-        TextField nom = new TextField("", "entrer nom!!");
+        TextField nom = new TextField(SessionManager.getUserFirstName());
         nom.setUIID("nom");
         addStringValue("nom",nom);
         
-        TextField prenom = new TextField("", "entrer prenom!!");
+        TextField prenom = new TextField(SessionManager.getUserLastName());
         prenom.setUIID("prenom");
         addStringValue("prenom",prenom);
         
-          TextField email = new TextField("", "entrer Email!!");
+          TextField email = new TextField(SessionManager.getEmail());
         email.setUIID("email");
         addStringValue("email",email);
         
